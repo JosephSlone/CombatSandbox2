@@ -8,7 +8,7 @@ public class CursorAffordance : MonoBehaviour {
     [SerializeField] Texture2D enemyCursor = null;
     [SerializeField] Texture2D unknownCursor = null;
 
-    [SerializeField] Vector2 defaultCursorHotSpot = new Vector2(96,96);
+    [SerializeField] Vector2 defaultCursorHotSpot = new Vector2(0,0);
 
     CameraRaycaster cameraRaycaster;
 

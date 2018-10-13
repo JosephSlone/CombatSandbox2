@@ -163,7 +163,7 @@ MonoBehaviour:
   walkCursor: {fileID: 2800000, guid: bf42daee65a1b6c42a6b9d64f0107f67, type: 3}
   enemyCursor: {fileID: 2800000, guid: bc3888c48bb859e43a0f965552b95173, type: 3}
   unknownCursor: {fileID: 2800000, guid: bd20c59a82a0a6940bf1eac9c7cf7dbd, type: 3}
-  defaultCursorHotSpot: {x: 96, y: 96}
+  defaultCursorHotSpot: {x: 0, y: 0}
 --- !u!114 &114660176699960058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,11 +189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalRotationSpeed: 75
-  verticalRotationSpeed: 75
   theCamera: {fileID: 20047006864152952}
   theBoom: {fileID: 1733121335146662}
   playerMovement: {fileID: 0}
-  rotationSpeed: 50
-  verticalSpeed: 1
+  rotationSpeed: 1
+  homeSpeed: 5
   target: {x: 0, y: 0, z: 0}
   currentRotation: {x: 0, y: 0, z: 0}
+  mouseScrollWheel: 0
