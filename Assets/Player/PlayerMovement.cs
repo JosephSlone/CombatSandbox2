@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] int CrouchToggleDelay = 20;
 
+    public bool isInDirectMode = false;
+
     ThirdPersonCharacter m_Character;   // A reference to the ThirdPersonCharacter on the object
     CameraRaycaster cameraRaycaster;
     Vector3 currentClickTarget;
     float walkMoveStopRadius = 0.1f;
-    bool isInDirectMode = false;
+    
     bool m_Jump = false;
     bool m_crouch = false;
 
@@ -29,14 +31,27 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // TODO Add to a menu
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            isInDirectMode = !isInDirectMode;
+        }
 
-        //print(Input.GetAxis("DPAD Vertical"));
-        //print(Input.GetAxis("DPAD Horizontal"));
-
-
+        if (isInDirectMode)
+        {
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.visible = true;
+        }
 
     }
 
+    public bool getMovementMode()
+    {
+        return isInDirectMode;
+    }
 
     private void CrouchToggle()
     {
@@ -55,11 +70,6 @@ public class PlayerMovement : MonoBehaviour
     // Fixed update is called in sync with physics
     private void FixedUpdate()
     {
-        // TODO Add to a menu
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            isInDirectMode = !isInDirectMode;
-        }
 
         if (isInDirectMode)
         {
