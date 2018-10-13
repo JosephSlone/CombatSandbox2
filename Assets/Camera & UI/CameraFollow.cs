@@ -49,8 +49,6 @@ public class CameraFollow : MonoBehaviour {
         {
             isMouseScrolling = !isMouseScrolling;
         }
-
-
     }
 
 
@@ -85,7 +83,6 @@ public class CameraFollow : MonoBehaviour {
                 target.y += 2;
                 theCamera.transform.LookAt(target);
             }
-
         }
         else
         {
@@ -102,8 +99,8 @@ public class CameraFollow : MonoBehaviour {
                 float mouseXRotationSpeed = Input.GetAxis("Mouse X");
                 float mouseYRotationSpeed = Input.GetAxis("Mouse Y");
 
-                newMouseTarget.x = newMouseTarget.x + mouseXRotationSpeed * 100f;
-                newMouseTarget.y = newMouseTarget.y + mouseYRotationSpeed * 100f;
+                newMouseTarget.x = newMouseTarget.x + mouseXRotationSpeed * 800f;
+                newMouseTarget.y = newMouseTarget.y + mouseYRotationSpeed * 80f;
 
                 mouseCameraTarget = Vector3.MoveTowards(mouseCameraTarget, newMouseTarget, Time.deltaTime * 5f);
 
