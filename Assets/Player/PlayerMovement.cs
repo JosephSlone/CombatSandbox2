@@ -12,20 +12,20 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isInDirectMode = false;
 
-    ThirdPersonCharacter m_Character;   // A reference to the ThirdPersonCharacter on the object
+    ThirdPersonCharacter player;   // A reference to the ThirdPersonCharacter on the object
     CameraRaycaster cameraRaycaster;
     Vector3 currentClickTarget;
     float walkMoveStopRadius = 0.1f;
     
-    bool m_Jump = false;
-    bool m_crouch = false;
+    bool jump = false;
+    bool crouch = false;
 
     int CrouchToggleCount = 0;
 
     private void Start()
     {
         cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
-        m_Character = GetComponent<ThirdPersonCharacter>();
+        player = GetComponent<ThirdPersonCharacter>();
         currentClickTarget = transform.position;
     }
 
@@ -60,8 +60,15 @@ public class PlayerMovement : MonoBehaviour
             CrouchToggleCount++;
             if (CrouchToggleCount > CrouchToggleDelay)
             {
-                m_crouch = !m_crouch;
+                crouch = !crouch;
                 CrouchToggleCount = 0;
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                crouch = !crouch;
             }
         }
     }
@@ -70,7 +77,6 @@ public class PlayerMovement : MonoBehaviour
     // Fixed update is called in sync with physics
     private void FixedUpdate()
     {
-
         if (isInDirectMode)
         {
             ProcessDirectMovement();
@@ -89,9 +95,9 @@ public class PlayerMovement : MonoBehaviour
 
         CrouchToggle();
 
-        if (!m_Jump)
+        if (!jump)
         {
-            m_Jump = Input.GetButtonDown("Jump");
+            jump = Input.GetButtonDown("Jump");
         }
 
 
@@ -100,12 +106,15 @@ public class PlayerMovement : MonoBehaviour
         Vector3 m_Move = v * m_CamForward + h * Camera.main.transform.right;
 
         // pass all parameters to the character control script
-        m_Character.Move(m_Move, m_crouch, m_Jump);
-        m_Jump = false;
+        player.Move(m_Move, crouch, jump);
+        jump = false;
     }
 
     private void ProcessMouseMovement()
     {
+
+        Quaternion facing = player.transform.rotation;
+
         if (Input.GetMouseButton(0))
         {
             switch (cameraRaycaster.layerHit)
@@ -122,14 +131,28 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if (!jump)
+        {
+            jump = Input.GetButtonDown("Jump");
+        }
+
         if (Vector3.Distance(currentClickTarget, transform.position) > walkMoveStopRadius)
         {
-            m_Character.Move(currentClickTarget - transform.position, false, false);
+            player.Move(currentClickTarget - transform.position, crouch, jump);
+            currentClickTarget = player.transform.position;
         }
         else
         {
-            m_Character.Move(Vector3.zero, false, false);
+            player.Move(Vector3.zero, crouch, jump);
+            currentClickTarget = player.transform.position;
         }
+
+        if(jump)
+        {
+            player.transform.rotation = facing;
+        }
+        CrouchToggle();
+        jump = false;
     }
 }
 
