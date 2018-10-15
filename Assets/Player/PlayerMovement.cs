@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
+using Cinemachine;
 
 // TODO Provide a Movement Mode Notification on the HUD.
 
@@ -9,8 +10,9 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] int CrouchToggleDelay = 20;
-
     public bool isInDirectMode = false;
+
+    CinemachineFreeLook freeLook;
 
     ThirdPersonCharacter m_Character;   // A reference to the ThirdPersonCharacter on the object
     CameraRaycaster cameraRaycaster;
@@ -21,31 +23,69 @@ public class PlayerMovement : MonoBehaviour
     bool m_crouch = false;
 
     int CrouchToggleCount = 0;
+    string cameraYAxis;
+    string cameraXAxis;
 
     private void Start()
     {
         cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
+        freeLook = FindObjectOfType<CinemachineFreeLook>();
+
         m_Character = GetComponent<ThirdPersonCharacter>();
         currentClickTarget = transform.position;
+
+        cameraYAxis = freeLook.m_YAxis.m_InputAxisName;
+        cameraXAxis = freeLook.m_XAxis.m_InputAxisName;
+
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     private void Update()
     {
+        MouseLook();
+
         // TODO Add to a menu
         if (Input.GetKeyDown(KeyCode.G))
         {
             isInDirectMode = !isInDirectMode;
         }
 
-        if (isInDirectMode)
+
+    }
+
+    private void MouseLook()
+    {
+        if (!getMovementMode())
         {
-            Cursor.visible = false;
+            freeLook.m_YAxisRecentering.m_enabled = false;
+            if (Input.GetAxis("Mouse ScrollWheel") > 0)
+            {
+                freeLook.m_YAxis.Value += 0.05f;
+            }
+            else
+            {
+                if (Input.GetAxis("Mouse ScrollWheel") < 0)
+                {
+                    freeLook.m_YAxis.Value -= 0.05f;
+                }
+            }
+
+            if (Input.GetMouseButton(2))
+            {
+                print("Center Button Down");
+                freeLook.m_YAxis.m_InputAxisName = "Mouse Y";
+                freeLook.m_XAxis.m_InputAxisName = "Mouse X";
+            }
+            else
+            {
+                freeLook.m_YAxis.m_InputAxisName = cameraYAxis;
+                freeLook.m_XAxis.m_InputAxisName = cameraXAxis;
+            }
         }
         else
         {
-            Cursor.visible = true;
+            freeLook.m_YAxisRecentering.m_enabled = true;
         }
-
     }
 
     public bool getMovementMode()
@@ -108,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            switch (cameraRaycaster.layerHit)
+            switch (cameraRaycaster.currentLayerHit)
             {
                 case Layer.Walkable:
                     currentClickTarget = cameraRaycaster.hit.point;

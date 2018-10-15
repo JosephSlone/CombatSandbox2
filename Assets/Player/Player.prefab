@@ -2502,7 +2502,7 @@ MonoBehaviour:
   m_JumpPower: 6
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 3
+  m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
 --- !u!114 &114680230949718260
@@ -2517,6 +2517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CrouchToggleDelay: 15
+  isInDirectMode: 0
 --- !u!136 &136425352347203760
 CapsuleCollider:
   m_ObjectHideFlags: 1
