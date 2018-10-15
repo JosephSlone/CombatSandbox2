@@ -7,7 +7,8 @@ public class Player : MonoBehaviour {
     [SerializeField] float maxHealthPoints = 100f;
     float currentHealthPoints = 100f;
 
-	
+    [SerializeField] float maxMannaPoints = 30f;
+    float currentMannaPoints = 30f;
 
     public float healthAsPercentage
     {
@@ -17,4 +18,14 @@ public class Player : MonoBehaviour {
             return currentHealthPoints / maxHealthPoints;
         }
     }
+
+    public float mannaAsPercentage
+    {
+
+        get
+        {
+            return currentMannaPoints / maxMannaPoints;
+        }
+    }
+
 }
