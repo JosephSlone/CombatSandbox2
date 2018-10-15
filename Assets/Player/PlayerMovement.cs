@@ -9,16 +9,16 @@ using Cinemachine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    [SerializeField] float walkMoveStopRadius = 0.2f;
     [SerializeField] int CrouchToggleDelay = 20;
+    [SerializeField] float attackMoveStopRadius = 5f;
+
     public bool isInDirectMode = false;
 
     CinemachineFreeLook freeLook;
-
-    ThirdPersonCharacter m_Character;   // A reference to the ThirdPersonCharacter on the object
+    ThirdPersonCharacter thirdPersonCharacter;   // A reference to the ThirdPersonCharacter on the object
     CameraRaycaster cameraRaycaster;
-    Vector3 currentClickTarget;
-    float walkMoveStopRadius = 0.1f;
-    
+    Vector3 currentDestination, clickPoint;    
     bool m_Jump = false;
     bool m_crouch = false;
 
@@ -30,26 +30,16 @@ public class PlayerMovement : MonoBehaviour
     {
         cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
         freeLook = FindObjectOfType<CinemachineFreeLook>();
+        thirdPersonCharacter = GetComponent<ThirdPersonCharacter>();
 
-        m_Character = GetComponent<ThirdPersonCharacter>();
-        currentClickTarget = transform.position;
-
+        currentDestination = transform.position;
         cameraYAxis = freeLook.m_YAxis.m_InputAxisName;
         cameraXAxis = freeLook.m_XAxis.m_InputAxisName;
-
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     private void Update()
     {
         MouseLook();
-
-        // TODO Add to a menu
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            isInDirectMode = !isInDirectMode;
-        }
-
 
     }
 
@@ -111,6 +101,12 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
 
+        if (Input.GetKeyDown(KeyCode.G)) // G for gamepad. TODO add to menu
+        {
+            isInDirectMode = !isInDirectMode; // toggle mode
+            currentDestination = transform.position; // clear the click target
+        }
+
         if (isInDirectMode)
         {
             ProcessDirectMovement();
@@ -140,36 +136,66 @@ public class PlayerMovement : MonoBehaviour
         Vector3 m_Move = v * m_CamForward + h * Camera.main.transform.right;
 
         // pass all parameters to the character control script
-        m_Character.Move(m_Move, m_crouch, m_Jump);
+        thirdPersonCharacter.Move(m_Move, m_crouch, m_Jump);
         m_Jump = false;
     }
 
     private void ProcessMouseMovement()
-    {
+    {        
         if (Input.GetMouseButton(0))
         {
+            clickPoint = cameraRaycaster.hit.point;
             switch (cameraRaycaster.currentLayerHit)
             {
                 case Layer.Walkable:
-                    currentClickTarget = cameraRaycaster.hit.point;
+                    currentDestination = ShortDestination(clickPoint, walkMoveStopRadius);
                     break;
 
                 case Layer.Enemy:
+                    currentDestination = ShortDestination(clickPoint, attackMoveStopRadius);
                     break;
 
                 default:
+                    print("Unexpected Layer Found!");
                     break;
             }
         }
 
-        if (Vector3.Distance(currentClickTarget, transform.position) > walkMoveStopRadius)
+        WalkToDestination();
+    }
+
+
+    private void WalkToDestination()
+    {
+        var playerToClickPoint = currentDestination - transform.position;
+        if (playerToClickPoint.magnitude >= 0)
         {
-            m_Character.Move(currentClickTarget - transform.position, false, false);
+            thirdPersonCharacter.Move(playerToClickPoint, false, false);
         }
         else
         {
-            m_Character.Move(Vector3.zero, false, false);
+            thirdPersonCharacter.Move(Vector3.zero, false, false);
         }
+    }
+
+    Vector3 ShortDestination(Vector3 destination, float shortening)
+    {
+        Vector3 reductionVector = (destination - transform.position).normalized * shortening;
+        return destination - reductionVector;
+    }
+
+    private void OnDrawGizmos()
+    {
+        // Draw movement gizmos
+
+        Gizmos.color = Color.black;
+        Gizmos.DrawLine(transform.position, clickPoint);
+        Gizmos.DrawSphere(currentDestination, 0.15f);
+        Gizmos.DrawSphere(clickPoint, 0.1f);
+
+        // Draw attack sphere
+        Gizmos.color = new Color(255f, 0f, 0, .5f);
+        Gizmos.DrawWireSphere(transform.position, attackMoveStopRadius);
     }
 }
 

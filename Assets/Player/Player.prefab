@@ -2516,7 +2516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f341e8ab0de1a484e97508bf1ace1024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkMoveStopRadius: 2
   CrouchToggleDelay: 15
+  attackMoveStopRadius: 2
   isInDirectMode: 0
 --- !u!136 &136425352347203760
 CapsuleCollider:
