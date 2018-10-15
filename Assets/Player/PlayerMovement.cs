@@ -94,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         CrouchToggle();
+        //crouch = Input.GetButtonDown("Joystick Button 8");
 
         if (!jump)
         {
@@ -135,6 +136,8 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = Input.GetButtonDown("Jump");
         }
+
+        //crouch = Input.GetButtonDown("Joystick Button 8");
 
         if (Vector3.Distance(currentClickTarget, transform.position) > walkMoveStopRadius)
         {
