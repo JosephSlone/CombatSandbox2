@@ -31,10 +31,6 @@ public class CameraRaycaster : MonoBehaviour
     void Start() // TODO Awake?
     {
         viewCamera = Camera.main;
-        foreach(Layer layer in layerPriorities)
-        {
-            print("Layer: " + layer.ToString());
-        }
         
     }
 
