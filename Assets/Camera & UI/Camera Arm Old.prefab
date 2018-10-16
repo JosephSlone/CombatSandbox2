@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4314997085088424}
   - component: {fileID: 114863791329597648}
   m_Layer: 0
-  m_Name: Camera Arm
+  m_Name: Camera Arm Old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   walkCursor: {fileID: 2800000, guid: bf42daee65a1b6c42a6b9d64f0107f67, type: 3}
   enemyCursor: {fileID: 2800000, guid: bc3888c48bb859e43a0f965552b95173, type: 3}
   unknownCursor: {fileID: 2800000, guid: bd20c59a82a0a6940bf1eac9c7cf7dbd, type: 3}
-  defaultCursorHotSpot: {x: 0, y: 0}
+  cursorHotSpot: {x: 0, y: 0}
 --- !u!114 &114660176699960058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,7 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657494e65b587ee448aea9eafb6b4efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerPriorities: 0a00000009000000
   distanceToBackground: 100
 --- !u!114 &114863791329597648
 MonoBehaviour:

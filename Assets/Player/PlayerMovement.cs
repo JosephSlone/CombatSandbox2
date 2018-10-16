@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] int CrouchToggleDelay = 20;
     [SerializeField] float attackMoveStopRadius = 5f;
 
-    public bool isInDirectMode = false;
+    public bool isInDirectMode = true;   // Start using game controller!
 
     CinemachineFreeLook freeLook;
     ThirdPersonCharacter thirdPersonCharacter;   // A reference to the ThirdPersonCharacter on the object
@@ -100,7 +100,6 @@ public class PlayerMovement : MonoBehaviour
     // Fixed update is called in sync with physics
     private void FixedUpdate()
     {
-
         if (Input.GetKeyDown(KeyCode.G)) // G for gamepad. TODO add to menu
         {
             isInDirectMode = !isInDirectMode; // toggle mode
@@ -119,6 +118,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void ProcessDirectMovement()
     {
+        // Needs to be moved later.
+
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
+
         // read inputs
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
