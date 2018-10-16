@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Cinemachine;
 
 // Add a UI Socket transform to your enemy
 // Attack this script to the socket
@@ -11,18 +12,24 @@ public class EnemyUI : MonoBehaviour {
     GameObject enemyCanvasPrefab = null;
 
     Camera cameraToLookAt;
+    CinemachineFreeLook freeLook;
 
     // Use this for initialization 
     void Start()
-    {
-        cameraToLookAt = Camera.main;
+    { 
         Instantiate(enemyCanvasPrefab, transform.position, Quaternion.identity, transform);
+        cameraToLookAt = Camera.main;
+        freeLook = FindObjectOfType<CinemachineFreeLook>();
     }
 
     // Update is called once per frame 
     void LateUpdate()
     {
-        transform.LookAt(cameraToLookAt.transform);
-        transform.rotation = Quaternion.LookRotation(cameraToLookAt.transform.forward);
+        transform.LookAt(freeLook.transform);
+        transform.rotation = Quaternion.LookRotation(freeLook.transform.forward);
+
+        
+        //transform.LookAt(transform.position + cameraToLookAt.transform.rotation * Vector3.forward,
+        //    cameraToLookAt.transform.rotation * Vector3.up);
     }
 }
