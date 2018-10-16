@@ -160,7 +160,6 @@ public class PlayerMovement : MonoBehaviour
                     break;
             }
         }
-
         WalkToDestination();
     }
 
@@ -168,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
     private void WalkToDestination()
     {
         var playerToClickPoint = currentDestination - transform.position;
-        if (playerToClickPoint.magnitude >= 0)
+        if (playerToClickPoint.magnitude >= 0.1)
         {
             thirdPersonCharacter.Move(playerToClickPoint, false, false);
         }

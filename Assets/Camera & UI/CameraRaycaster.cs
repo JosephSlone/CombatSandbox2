@@ -2,13 +2,16 @@
 
 public class CameraRaycaster : MonoBehaviour
 {
-    public Layer[] layerPriorities = {
+    private Layer[] layerPriorities = {
         Layer.Enemy,
-        Layer.Walkable
+        Layer.Water,
+        Layer.Buildings,
+        Layer.Walkable       
     };
 
     [SerializeField] float distanceToBackground = 100f;
     Camera viewCamera;
+
 
     RaycastHit raycastHit;
     public RaycastHit hit
@@ -22,12 +25,17 @@ public class CameraRaycaster : MonoBehaviour
         get { return layerHit; }
     }
 
-    public delegate void OnLayerChange(Layer newLayer);  // declare new delegat type
-    public event OnLayerChange layerChangeObservers;  // Instantiate an observer set
+    public delegate void OnLayerChange(Layer newLayer);  // declare new delegate type
+    public event OnLayerChange onLayerChange;  // Instantiate an observer set
 
     void Start() // TODO Awake?
     {
         viewCamera = Camera.main;
+        foreach(Layer layer in layerPriorities)
+        {
+            print("Layer: " + layer.ToString());
+        }
+        
     }
 
     void Update()
@@ -42,9 +50,9 @@ public class CameraRaycaster : MonoBehaviour
                 if (layerHit != layer)  // if layer has changed
                 {
                     layerHit = layer;
-                    layerChangeObservers(layer);
+                    onLayerChange(layer);
                 }
-                layerHit = layer;
+                //layerHit = layer;
                 return;
             }
         }

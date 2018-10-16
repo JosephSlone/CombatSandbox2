@@ -2,6 +2,8 @@
 {
     Walkable = 9,
     Enemy = 10,
-    RaycastEndStop = -1
+    RaycastEndStop = -1,
+    Water = 4,
+    Buildings = 11
 }
 
