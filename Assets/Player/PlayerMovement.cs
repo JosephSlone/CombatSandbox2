@@ -187,18 +187,18 @@ public class PlayerMovement : MonoBehaviour
         return destination - reductionVector;
     }
 
-    private void OnDrawGizmos()
-    {
-        // Draw movement gizmos
+    //private void OnDrawGizmos()
+    //{
+    //    // Draw movement gizmos
 
-        Gizmos.color = Color.black;
-        Gizmos.DrawLine(transform.position, clickPoint);
-        Gizmos.DrawSphere(currentDestination, 0.15f);
-        Gizmos.DrawSphere(clickPoint, 0.1f);
+    //    Gizmos.color = Color.black;
+    //    Gizmos.DrawLine(transform.position, clickPoint);
+    //    Gizmos.DrawSphere(currentDestination, 0.15f);
+    //    Gizmos.DrawSphere(clickPoint, 0.1f);
 
-        // Draw attack sphere
-        Gizmos.color = new Color(255f, 0f, 0, .5f);
-        Gizmos.DrawWireSphere(transform.position, attackMoveStopRadius);
-    }
+    //    // Draw attack sphere
+    //    Gizmos.color = new Color(255f, 0f, 0, .5f);
+    //    Gizmos.DrawWireSphere(transform.position, attackMoveStopRadius);
+    //}
 }
 

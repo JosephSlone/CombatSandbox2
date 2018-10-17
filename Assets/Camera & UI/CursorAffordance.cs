@@ -21,31 +21,24 @@ public class CursorAffordance : MonoBehaviour {
 
 
 	void OnLayerChanged (Layer newLayer) {
-        print("Cursor over new layer: "+newLayer.ToString());
 
         switch(newLayer)
         {
             case Layer.Enemy:
                 Cursor.SetCursor(enemyCursor, cursorHotSpot, CursorMode.Auto);
-                print("Enemy");
                 break;
             case Layer.Buildings:
-                print("Buildings");
                 Cursor.SetCursor(unknownCursor, cursorHotSpot, CursorMode.Auto);
                 break;
             case Layer.Water:
-                print("Water");
                 Cursor.SetCursor(unknownCursor, cursorHotSpot, CursorMode.Auto);
                 break;
             case Layer.RaycastEndStop:
-                print("EndStop");
                 Cursor.SetCursor(unknownCursor, cursorHotSpot, CursorMode.Auto);
                 break;
             case Layer.Walkable:
                 Cursor.SetCursor(walkCursor, cursorHotSpot, CursorMode.Auto);
-                print("Walkable");
                 break;
-
             default:
                 Debug.LogError("Don't know what cursor to show");
                 break;

@@ -11,12 +11,13 @@ public class EnemyUI : MonoBehaviour {
     [SerializeField]
     GameObject enemyCanvasPrefab = null;
 
+
     Camera cameraToLookAt;
     CinemachineFreeLook freeLook;
 
     // Use this for initialization 
     void Start()
-    { 
+    {
         Instantiate(enemyCanvasPrefab, transform.position, Quaternion.identity, transform);
         cameraToLookAt = Camera.main;
         freeLook = FindObjectOfType<CinemachineFreeLook>();
@@ -27,9 +28,6 @@ public class EnemyUI : MonoBehaviour {
     {
         transform.LookAt(freeLook.transform);
         transform.rotation = Quaternion.LookRotation(freeLook.transform.forward);
-
-        
-        //transform.LookAt(transform.position + cameraToLookAt.transform.rotation * Vector3.forward,
-        //    cameraToLookAt.transform.rotation * Vector3.up);
+      
     }
 }
