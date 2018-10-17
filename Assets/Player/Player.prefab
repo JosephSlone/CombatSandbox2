@@ -220,8 +220,7 @@ GameObject:
   - component: {fileID: 136425352347203760}
   - component: {fileID: 114273838262625044}
   - component: {fileID: 114680230949718260}
-  - component: {fileID: 114767499817813744}
-  - component: {fileID: 114946984615465024}
+  - component: {fileID: 114568397801749210}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1689,7 +1688,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1140336639530992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.009833276, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4398916136287620}
@@ -2507,6 +2506,19 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
+--- !u!114 &114568397801749210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140336639530992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ac735b9a91b564eb65733741ae2086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 100
+  maxMannaPoints: 30
 --- !u!114 &114680230949718260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2522,32 +2534,6 @@ MonoBehaviour:
   CrouchToggleDelay: 15
   attackMoveStopRadius: 2
   isInDirectMode: 1
---- !u!114 &114767499817813744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1140336639530992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18ac735b9a91b564eb65733741ae2086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealthPoints: 139.3
-  maxMannaPoints: 68.7
---- !u!114 &114946984615465024
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1140336639530992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18ac735b9a91b564eb65733741ae2086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealthPoints: 100
-  maxMannaPoints: 30
 --- !u!136 &136425352347203760
 CapsuleCollider:
   m_ObjectHideFlags: 1
