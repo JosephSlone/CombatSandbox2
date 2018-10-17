@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1920265162913204}
+  m_RootGameObject: {fileID: 1322810514757510}
   m_IsPrefabAsset: 1
---- !u!1 &1018658596564502
+--- !u!1 &1188037293536282
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4679967247621262}
-  - component: {fileID: 33037963312603806}
-  - component: {fileID: 23189613666259304}
-  - component: {fileID: 114073068997573726}
+  - component: {fileID: 4325720371402708}
+  - component: {fileID: 33022989758574990}
+  - component: {fileID: 23856814498956382}
+  - component: {fileID: 114989635500899316}
   m_Layer: 0
   m_Name: EWQuiver_LOD1
   m_TagString: Untagged
@@ -29,35 +29,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1528542346046024
+--- !u!1 &1238452349705212
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4370629035890640}
-  - component: {fileID: 33161909554268116}
-  - component: {fileID: 23652552613979746}
-  - component: {fileID: 114401971695392292}
-  m_Layer: 0
-  m_Name: EWQuiver_LOD0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1740742605435020
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4117182301487178}
-  - component: {fileID: 33058409783520896}
-  - component: {fileID: 23190183897825832}
-  - component: {fileID: 114662307886048038}
+  - component: {fileID: 4990198756105534}
+  - component: {fileID: 33508717488256060}
+  - component: {fileID: 23986505649721714}
+  - component: {fileID: 114781943142814746}
   m_Layer: 0
   m_Name: EWQuiver_LOD3
   m_TagString: Untagged
@@ -65,34 +47,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1893256380919288
+--- !u!1 &1322810514757510
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4238515439781684}
-  - component: {fileID: 33253090411263626}
-  - component: {fileID: 23513265044149330}
-  - component: {fileID: 114436876494146448}
-  m_Layer: 0
-  m_Name: EWQuiver_LOD2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1920265162913204
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4774811340408664}
-  - component: {fileID: 114183162891205260}
-  - component: {fileID: 114031179193395060}
+  - component: {fileID: 4508741927486138}
+  - component: {fileID: 114699718892116778}
+  - component: {fileID: 114055877644460882}
   m_Layer: 0
   m_Name: G2MEWQuiver
   m_TagString: Untagged
@@ -100,81 +64,117 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4117182301487178
+--- !u!1 &1523820475150774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4629301792407226}
+  - component: {fileID: 33844047505290692}
+  - component: {fileID: 23270314001655854}
+  - component: {fileID: 114763972066410968}
+  m_Layer: 0
+  m_Name: EWQuiver_LOD0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1905745327002778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4146052775649030}
+  - component: {fileID: 33934320226398038}
+  - component: {fileID: 23277794965612284}
+  - component: {fileID: 114013031750105716}
+  m_Layer: 0
+  m_Name: EWQuiver_LOD2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4146052775649030
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1740742605435020}
+  m_GameObject: {fileID: 1905745327002778}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4774811340408664}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4238515439781684
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1893256380919288}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4774811340408664}
+  m_Father: {fileID: 4508741927486138}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4370629035890640
+--- !u!4 &4325720371402708
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528542346046024}
+  m_GameObject: {fileID: 1188037293536282}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4774811340408664}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4679967247621262
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1018658596564502}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4774811340408664}
+  m_Father: {fileID: 4508741927486138}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4774811340408664
+--- !u!4 &4508741927486138
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1920265162913204}
+  m_GameObject: {fileID: 1322810514757510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4370629035890640}
-  - {fileID: 4679967247621262}
-  - {fileID: 4238515439781684}
-  - {fileID: 4117182301487178}
+  - {fileID: 4629301792407226}
+  - {fileID: 4325720371402708}
+  - {fileID: 4146052775649030}
+  - {fileID: 4990198756105534}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23189613666259304
+--- !u!4 &4629301792407226
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523820475150774}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4508741927486138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4990198756105534
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1238452349705212}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4508741927486138}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23270314001655854
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1018658596564502}
+  m_GameObject: {fileID: 1523820475150774}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -204,12 +204,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23190183897825832
+--- !u!23 &23277794965612284
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1740742605435020}
+  m_GameObject: {fileID: 1905745327002778}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -239,12 +239,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23513265044149330
+--- !u!23 &23856814498956382
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1893256380919288}
+  m_GameObject: {fileID: 1188037293536282}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -274,12 +274,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23652552613979746
+--- !u!23 &23986505649721714
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528542346046024}
+  m_GameObject: {fileID: 1238452349705212}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -309,65 +309,40 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33037963312603806
+--- !u!33 &33022989758574990
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1018658596564502}
+  m_GameObject: {fileID: 1188037293536282}
   m_Mesh: {fileID: 4300002, guid: d61bdc2c05e466b47828a752c61a9041, type: 3}
---- !u!33 &33058409783520896
+--- !u!33 &33508717488256060
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1740742605435020}
+  m_GameObject: {fileID: 1238452349705212}
   m_Mesh: {fileID: 4300006, guid: d61bdc2c05e466b47828a752c61a9041, type: 3}
---- !u!33 &33161909554268116
+--- !u!33 &33844047505290692
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528542346046024}
+  m_GameObject: {fileID: 1523820475150774}
   m_Mesh: {fileID: 4300000, guid: d61bdc2c05e466b47828a752c61a9041, type: 3}
---- !u!33 &33253090411263626
+--- !u!33 &33934320226398038
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1893256380919288}
+  m_GameObject: {fileID: 1905745327002778}
   m_Mesh: {fileID: 4300004, guid: d61bdc2c05e466b47828a752c61a9041, type: 3}
---- !u!114 &114031179193395060
+--- !u!114 &114013031750105716
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1920265162913204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -2101776992, guid: 2188feb5cf201e848a09932d706b7c3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dazName: G2MEWQuiver
-  ID: 694def79-a5bb-4062-a681-25a34a25b392
-  LODlist:
-  - {fileID: 114401971695392292}
-  - {fileID: 114073068997573726}
-  - {fileID: 114436876494146448}
-  - {fileID: 114662307886048038}
-  currentLODlevel: 1
-  meshType: 3
-  lockMaterials: 0
-  isAttached: 0
-  isVisible: 1
-  basePosition: {x: 0, y: 0, z: 0}
-  baseRotation: {x: 0, y: 0, z: 0}
---- !u!114 &114073068997573726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1018658596564502}
+  m_GameObject: {fileID: 1905745327002778}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -2050122676, guid: 2188feb5cf201e848a09932d706b7c3a, type: 3}
@@ -379,13 +354,38 @@ MonoBehaviour:
   meshType: 3
   originalMesh: {fileID: 0}
   originalBindposes: []
-  runtimeMorphPath: MORPH3D/Wood_Elf_Scout/G2MEWQuiver/EWQuiver_LOD1
---- !u!114 &114183162891205260
+  runtimeMorphPath: MORPH3D/Wood_Elf_Scout/G2MEWQuiver/EWQuiver_LOD2
+--- !u!114 &114055877644460882
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1920265162913204}
+  m_GameObject: {fileID: 1322810514757510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2101776992, guid: 2188feb5cf201e848a09932d706b7c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dazName: G2MEWQuiver
+  ID: 694def79-a5bb-4062-a681-25a34a25b392
+  LODlist:
+  - {fileID: 114763972066410968}
+  - {fileID: 114989635500899316}
+  - {fileID: 114013031750105716}
+  - {fileID: 114781943142814746}
+  currentLODlevel: 1
+  meshType: 3
+  lockMaterials: 0
+  isAttached: 0
+  isVisible: 1
+  basePosition: {x: 0, y: 0, z: 0}
+  baseRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &114699718892116778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322810514757510}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1652709342, guid: 2188feb5cf201e848a09932d706b7c3a, type: 3}
@@ -413,12 +413,12 @@ MonoBehaviour:
   mcs_version: 1.6
   item_name: G2MEWQuiver
   collection_name: Wood_Elf_Scout
---- !u!114 &114401971695392292
+--- !u!114 &114763972066410968
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528542346046024}
+  m_GameObject: {fileID: 1523820475150774}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -2050122676, guid: 2188feb5cf201e848a09932d706b7c3a, type: 3}
@@ -431,30 +431,12 @@ MonoBehaviour:
   originalMesh: {fileID: 0}
   originalBindposes: []
   runtimeMorphPath: MORPH3D/Wood_Elf_Scout/G2MEWQuiver/EWQuiver_LOD0
---- !u!114 &114436876494146448
+--- !u!114 &114781943142814746
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1893256380919288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -2050122676, guid: 2188feb5cf201e848a09932d706b7c3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dazName: 
-  ID: 
-  meshQuality: 0
-  meshType: 3
-  originalMesh: {fileID: 0}
-  originalBindposes: []
-  runtimeMorphPath: MORPH3D/Wood_Elf_Scout/G2MEWQuiver/EWQuiver_LOD2
---- !u!114 &114662307886048038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1740742605435020}
+  m_GameObject: {fileID: 1238452349705212}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -2050122676, guid: 2188feb5cf201e848a09932d706b7c3a, type: 3}
@@ -467,3 +449,21 @@ MonoBehaviour:
   originalMesh: {fileID: 0}
   originalBindposes: []
   runtimeMorphPath: MORPH3D/Wood_Elf_Scout/G2MEWQuiver/EWQuiver_LOD3
+--- !u!114 &114989635500899316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1188037293536282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2050122676, guid: 2188feb5cf201e848a09932d706b7c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dazName: 
+  ID: 
+  meshQuality: 0
+  meshType: 3
+  originalMesh: {fileID: 0}
+  originalBindposes: []
+  runtimeMorphPath: MORPH3D/Wood_Elf_Scout/G2MEWQuiver/EWQuiver_LOD1
