@@ -18,16 +18,15 @@ public class EnemyUI : MonoBehaviour {
     // Use this for initialization 
     void Start()
     {
-        Instantiate(enemyCanvasPrefab, transform.position, Quaternion.identity, transform);
+        
         cameraToLookAt = Camera.main;
         freeLook = FindObjectOfType<CinemachineFreeLook>();
+        Instantiate(enemyCanvasPrefab, transform.position, transform.rotation, transform);
     }
 
     // Update is called once per frame 
     void LateUpdate()
     {
-        transform.LookAt(freeLook.transform);
-        transform.rotation = Quaternion.LookRotation(freeLook.transform.forward);
-      
+        transform.LookAt(freeLook.transform);              
     }
 }
