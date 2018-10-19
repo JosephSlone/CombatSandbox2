@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/First Scene.unity
-    guid: 83c857008312b734682e9c3711116c7f
+    path: Assets/Scenes/First Village.unity
+    guid: 4e97b13c5f09c28408ebe03e0b654fa1
   m_configObjects: {}
